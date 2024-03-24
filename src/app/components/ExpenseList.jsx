@@ -11,10 +11,11 @@ export const ExpenseList = () => {
   return (
     <table className="table-auto w-full">
       <thead className="">
-        <tr className="grid grid-cols-4 gap-4 place-items-start p-2">
+        <tr className="grid grid-cols-5 gap-4 place-items-start p-2">
           <th>Department</th>
           <th>Allocated Budget</th>
           <th>Increase by 10</th>
+          <th>Decrease by 10</th>
           <th>Delete</th>
         </tr>
       </thead>
