@@ -26,11 +26,15 @@ export const AllocationForm = (props) => {
         type: "RED_EXPENSE",
         payload: expense,
       });
+      alert(`reduced ${name} by ${cost}`);
+      setCost("");
     } else {
       dispatch({
         type: "ADD_EXPENSE",
         payload: expense,
       });
+      alert(`added ${cost} to ${name}`);
+      setCost("");
     }
   };
   return (
