@@ -4,9 +4,10 @@
 
 import React, { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
+import { Currency } from "./Currency";
 
 export const AllocationForm = (props) => {
-  const { dispatch, remaining } = useContext(AppContext);
+  const { dispatch, remaining, currency } = useContext(AppContext);
   const [name, setName] = useState("");
   const [cost, setCost] = useState("");
   const [action, setAction] = useState("");
@@ -38,7 +39,7 @@ export const AllocationForm = (props) => {
     }
   };
   return (
-    <div className="flex items-center gap-10">
+    <div className="flex flex-wrap items-center gap-10">
       <div className="flex items-center">
         <label className="border text-slate-600 bg-slate-200 px-4 py-2 rounded-l-lg">
           Department
@@ -85,7 +86,8 @@ export const AllocationForm = (props) => {
           </option>
         </select>
       </div>
-      <div>
+      <div className="flex items-center gap-2">
+        <div>{currency}</div>
         <input
           required="required"
           type="number"
